@@ -1,10 +1,10 @@
 /**
- * e-mail : rachelsysteme@gmail.com
+ * e-mail : openprogramming23@gmail.com
  * gitHub : https://github.com/RS-malik-el
- * Donation : paypal.me/RachelSysteme
  * 
- * @AUTHEUR : RACHEL SYSTEME
+ * @AUTHEUR : Exaucé KIMBEMBE / @OpenProgramming
  * DATE : 25/07/2022
+ * MODIFIER : 06/02/2055
  * 
  * @Board : arduino uno
  * 
@@ -27,14 +27,15 @@
 #define DEL 250 // Temps de défilement des caractères
 #define CS_PIN 2 
 
-simpleMatrix afficheur(CS_PIN,false,2); 
+simpleMatrix afficheur(CS_PIN,2); 
 
 const char msg1[] PROGMEM = "MERCI DE VOTRE CONFIANCE";
 char msg[] = "MERCI DE VOTRE CONFIANCE";
-char msg2[] = "ABONNEZ VOUS A NOTRE CHAINE YOUTUBE : RACHEL SYSTEME";
+char msg2[] = "ABONNEZ VOUS A NOTRE CHAINE YOUTUBE : OPENPROGRAMMING";
 
 void setup() {
   afficheur.begin();
+  afficheur.invertIndividualDisplays(true);
   afficheur.setIntensity(3);
   afficheur.clearDisplay();
 }
